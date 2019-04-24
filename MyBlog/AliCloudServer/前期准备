@@ -1,0 +1,18 @@
+- JDK安装
+- rabbitmq安装
+- Nginx安装
+  - 安装依赖：yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel
+  - //下载tar包
+wget http://nginx.org/download/nginx-1.13.7.tar.gz
+tar -xvf nginx-1.13.7.tar.g
+//进入nginx目录
+cd /usr/local/nginx
+//执行命令
+./configure
+//执行make命令
+make
+//执行make install命令
+make install
+
+[参考连接](https://www.cnblogs.com/jimisun/p/8057156.html)
+安装路径：cd /usr/local/nginx/

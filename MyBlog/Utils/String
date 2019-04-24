@@ -1,0 +1,22 @@
+[TOC]
+
+### 字符串字符集编码转换
+
+``` java
+ public static String change2UTF8(String source,String encoding)
+ {
+  String result;
+  try
+  {
+    ByteBuffer byteBuffer = ByteBuffer.wrap(source.getBytes(encoding));
+    CharBuffer charBuffer = Charset.forName(encoding).decode(byteBuffer);
+    ByteBuffer utf8Byte = Charset.forName(encoding).encode(charBuffer);
+    result = new String(utf8Byte.array());
+  }catch(IOException e)
+  {
+    return source;
+  }
+  return result;
+ }
+```
+
