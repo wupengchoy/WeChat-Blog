@@ -44,7 +44,7 @@ eureka:
 
 &nbsp;&nbsp;以上一个eureka注册中心就编写完了，访问http://localhost:8380见到如下页面说明服务启动成功。此时instances currently registered with Eureka下为空是因为还没有服务注册到当前eureka中。
 
-![eureka未注册](/Users/Jeremy/Documents/公众号/image/eureka未注册.png)
+![eureka未注册](Spring Cloud Eureka 注册中心.assets/eureka未注册.png)
 
 ## Eureka 客户端
 
@@ -70,7 +70,7 @@ eureka:
 
 - 在服务启动类上添加注解**@EnableEurekaClient**或者**@EnableDiscoveryClient**，启动服务，访问http://localhost:8380，发现在instances currently registered with Eureka下出现了当前服务信息，说明当前服务已经注册到eureka上。
 
-![eureka已注册](/Users/Jeremy/Documents/公众号/image/eureka已注册.png)
+![eureka已注册](Spring Cloud Eureka 注册中心.assets/eureka已注册.png)
 
 >在status这一栏下有个UP，这个是Eureka的健康检查机制，除此之外还有DOWN,OUT_OF_SERVICE_UNKOWN等，只有标记为UP的才能正常被请求。
 >
